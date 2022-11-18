@@ -1,0 +1,2 @@
+# DB-NODE-EXPRESS_SEQUELIZE
+Base de datos 
