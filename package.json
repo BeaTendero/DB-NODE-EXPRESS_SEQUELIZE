@@ -1,7 +1,7 @@
 {
   "name": "prc18",
-  "version": "0.0.1",
-  "description": "Proyecto inicial API REST",
+  "version": "1.0.0",
+  "description": "API REST",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,7 @@
     "API",
     "GeeksHubs"
   ],
-  "author": "Jose Marin",
+  "author": "Bea Tendero",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",
@@ -29,5 +29,14 @@
     "sequelize": "^6.8.0",
     "sequelize-cli": "^6.2.0",
     "winston": "^3.3.3"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BeaTendero/DB-NODE-EXPRESS_SEQUELIZE.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BeaTendero/DB-NODE-EXPRESS_SEQUELIZE/issues"
+  },
+  "homepage": "https://github.com/BeaTendero/DB-NODE-EXPRESS_SEQUELIZE#readme"
 }
