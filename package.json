@@ -30,7 +30,6 @@
     "sequelize-cli": "^6.2.0",
     "winston": "^3.3.3"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/BeaTendero/DB-NODE-EXPRESS_SEQUELIZE.git"
