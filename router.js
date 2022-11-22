@@ -10,7 +10,7 @@ const UserRouter = require('./views/UserRouter');
 
 //Rutas
 router.use('/api', UserRouter); //Login and register routes
-router.use('/movies',auth, MovieRouter); //add auth
-router.use('/categories',auth, CategoryRouter);
+router.use('/movies', MovieRouter); //add auth
+router.use('/categories',CategoryRouter);
 
 module.exports = router;

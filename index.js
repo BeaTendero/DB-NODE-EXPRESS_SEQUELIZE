@@ -4,7 +4,7 @@ const morgan = require('morgan');
 const logger = require('./config/winston');
 const db = require('./db.js');
 const router = require('./router.js');
-const cors = require("cors"); // Import cors module
+//   // Import cors module
 
 const app = express();
 const PORT = process.env.PORT || 3000; //Configuramos puerto heroku
