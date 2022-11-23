@@ -19,4 +19,4 @@ router.put('/:id',CategoryPolicy.update, CategoryController.update);
 router.delete('/', CategoryPolicy.deleteAll, CategoryController.deleteAll);
 router.delete('/:id', CategoryPolicy.delete, CategoryController.delete);
 
-module.exports = router;
+module.exports = router; 

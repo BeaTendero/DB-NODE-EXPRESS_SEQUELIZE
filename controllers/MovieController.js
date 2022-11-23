@@ -12,12 +12,14 @@ const MovieController = {}; //Create the object controller
 //CRUD end-points Functions
 //-------------------------------------------------------------------------------------
 //GET all movies from database
-MovieController.getAll = (req, res) => {
+MovieController.getAll = (req, res) => { //funciones propias de sequelize
     
+  /// peticiones asincronas
     movies.findAll({include: [{ model:categoryModel}]})
       .then(data => {
         res.send(data);
       })
+      //en caso de que se produzca un error saltará el error 500
       .catch(err => {
         res.status(500).send({
           message:
