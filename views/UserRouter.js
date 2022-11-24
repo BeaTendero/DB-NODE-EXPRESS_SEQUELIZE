@@ -3,7 +3,7 @@ const router = express.Router();
 
 //Importo modelo de datos
 const AuthController = require('../controllers/AuthController');
-const {middlewareBearer} = require('../middlewares/auth.js')
+const {middlewareBearer} = require('../middlewares/auth.js');
 
 
 // Dos rutas: login y registro
