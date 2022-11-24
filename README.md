@@ -32,29 +32,29 @@ sequelize db:seed:undo:all
 ```
 
 #### Register
-POST - localhost:3000/api/signup - { "name": "root", "email": "root@email.com",  "password": "password" }
+POST - localhost:3008/api/signup - { "name": "root", "email": "root@email.com",  "password": "password" }
 
 #### Login
-POST - localhost:3000/api/signin - { "email": "root@email.com",  "password": "password" }
+POST - localhost:3008/api/signin - { "email": "root@email.com",  "password": "password" }
 
 #### Home
-GET - localhost:3000
+GET - localhost:3008
 
 #### Movies
-GET - localhost:3000/movies
-GET - localhost:3000/movies/:id
-GET - localhost:3000/movies/name/:title
-POST - localhost:3000/movies
-PUT - localhost:3000/movies:id
-DELETE - localhost:3000/movies
-DELETE - localhost:3000/movies:id
+GET - localhost:3008/movies
+GET - localhost:3008/movies/:id
+GET - localhost:3008/movies/name/:title
+POST - localhost:3008/movies
+PUT - localhost:3008/movies:id
+DELETE - localhost:3008/movies
+DELETE - localhost:3008/movies:id
 
 #### Categories
-GET - localhost:3000/categories
-GET - localhost:3000/categories/:id
-GET - localhost:3000/categories/name/:title
-POST - localhost:3000/categories
-PUT - localhost:3000/categories:id
-DELETE - localhost:3000/categories
-DELETE - localhost:3000/categories:id
+GET - localhost:3008/categories
+GET - localhost:3008/categories/:id
+GET - localhost:3008/categories/name/:title
+POST - localhost:3008/categories
+PUT - localhost:3008/categories:id
+DELETE - localhost:3008/categories
+DELETE - localhost:3008/categories:id
 ```
