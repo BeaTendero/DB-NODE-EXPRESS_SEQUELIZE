@@ -11,6 +11,7 @@ module.exports = {
           email: 'admin@gmail.com',
           createdAt: new Date(),
           updatedAt: new Date(),
+          role_id: 1
         },
         {
           name: 'user1',
@@ -18,6 +19,7 @@ module.exports = {
           email: 'user1@gmail.com',
           createdAt: new Date(),
           updatedAt: new Date(),
+          role_id: 2
         },
         {
           name: 'user2',
@@ -25,6 +27,8 @@ module.exports = {
           email: 'user2@gmail.com',
           createdAt: new Date(),
           updatedAt: new Date(),
+          role_id: 2
+
         },
       ],
       {}

@@ -8,7 +8,7 @@ const cors = require ("cors")
 //   // Import cors module
 
 const app = express();
-const PORT = process.env.PORT || 3008; //Configuramos puerto 
+const PORT = process.env.PORT || 3007; //Configuramos puerto 
 
 //Config Cors Options
 var corsOptions = {
@@ -29,6 +29,7 @@ app.use(router);
 
 //Connecting to the database
 db.then(()=>{
+  
     //Starting server
         app.listen(PORT, ()=> console.log(`Server on port ${PORT}`.bgGreen.black));
     })
