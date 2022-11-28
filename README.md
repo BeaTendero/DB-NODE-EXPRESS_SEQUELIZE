@@ -41,15 +41,30 @@ POST - localhost:3008/api/signin - { "email": "root@email.com",  "password": "pa
 GET - localhost:3008
 
 #### Movies
-GET - localhost:3008/movies
-GET - localhost:3008/movies/:id
-GET - localhost:3008/movies/name/:title
-POST - localhost:3008/movies
-PUT - localhost:3008/movies:id
-DELETE - localhost:3008/movies
-DELETE - localhost:3008/movies:id
+
+GET /movies--> Muestra todas las películas.
+GET /movies/id/:id --> Muestra una película buscando por su Id.
+GET /movies/title/:title --> Muestra una película buscando por su título.
+POST /movies--> Registra una nueva película (Solo acceso como Administrador).
+DELETE /movies/:id--> Elimina una pelicula mediante su Id (Solo acceso como Administrador).
+DELETE /movies/deleteAll--> Elimina todas las películas (Solo acceso como Administrador).
+
+### Géneros
+
+GET/géneros --> Muestra todos los géneros.
+POST /genres --> Crea un nuevo genero (Solo acceso como Administrador).
+DELETE /genres --> Elimina todos los generos (Solo acceso como Administrador).
+DELETE /genres/:id --> Elimina un genero mediante su Id (Solo acceso como Administrador).
+
+### GéneroPelícula
+
+GET/genreMovie --> Muestra todos los géneros asignados a películas.
+POST/genreMovie --> Crea una nueva estimación de género a película (Solo acceso como Administrador).
+DELETE/genreMovie/:id --> Elimina una visualización de género mediante su Id (Solo acceso como Administrador).
+DELETE/genreMovie --> Elimina todas las asignaciones de géneros (Solo acceso como Administrador).
 
 #### Categories
+
 GET - localhost:3008/categories
 GET - localhost:3008/categories/:id
 GET - localhost:3008/categories/name/:title
@@ -58,3 +73,5 @@ PUT - localhost:3008/categories:id
 DELETE - localhost:3008/categories
 DELETE - localhost:3008/categories:id
 ```
+
+Relación de modelos
