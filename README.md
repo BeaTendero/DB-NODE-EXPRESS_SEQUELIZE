@@ -74,4 +74,4 @@ DELETE - localhost:3008/categories
 DELETE - localhost:3008/categories:id
 ```
 
-Relación de modelos
+Relación de modelos![Sin título](https://user-images.githubusercontent.com/114058695/204235795-c17d4a5e-68b0-4268-906c-15018652e5c1.png)
