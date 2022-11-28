@@ -2,6 +2,7 @@ const { user } = require('../models/index');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const authConfig = require('../config/auth');
+const { log } = require('winston');
 
 const AuthController = {}; //Create the object controller
 
@@ -18,9 +19,7 @@ AuthController.signIn = (req, res) =>{
             } else {
                 if (bcrypt.compareSync(password, user.password)) {
                     // Creamos el token
-                    let token = jwt.sign({ user: user }, authConfig.secret, {
-                        expiresIn: authConfig.expires
-                    });
+                    let token = jwt.sign({ user: user }, authConfig.secret);
 
                     res.json({
                         user: user,
@@ -44,6 +43,9 @@ AuthController.signUp = (req, res)=> {
 
         // Encriptamos la contraseña
         let password = bcrypt.hashSync(req.body.password, Number.parseInt(authConfig.rounds));
+        console.log('--------------------------------------');
+        console.log(password);
+        console.log('--------------------------------------');
 
         // Crear un usuario
         user.create({
@@ -53,9 +55,7 @@ AuthController.signUp = (req, res)=> {
         }).then(user => {
 
             // Creamos el token
-            let token = jwt.sign({ user: user }, authConfig.secret, {
-                expiresIn: authConfig.expires
-            });
+            let token = jwt.sign({ user: user }, authConfig.secret);
 
             res.json({
                 user: user,
@@ -63,17 +63,8 @@ AuthController.signUp = (req, res)=> {
             });
 
         }).catch(err => {
-            res.status(500).json(err);
+            res.status(500).json(err.message);
         });
-
-        // // Asigna rol a usuario
-        // user_role.create({
-        //     user_id: res.user.id,
-        //     role_id: 1
-        // }).then().catch(err => {
-        //     res.status(500).json(err);
-        // });
-
     };
 
 module.exports = AuthController;
